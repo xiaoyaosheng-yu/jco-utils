@@ -31,7 +31,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "'   a b c   '",
+          "content": "allTrim('   a b c   ')",
           "type": "String"
         }
       ]
@@ -71,7 +71,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "'   abc   '",
+          "content": "endsTrim('   abc   ')",
           "type": "String"
         }
       ]
@@ -111,7 +111,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "8",
+          "content": "getRandStr(8)",
           "type": "Number"
         }
       ]
@@ -151,7 +151,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "8",
+          "content": "getRandStrLower(8)",
           "type": "Number"
         }
       ]
@@ -191,7 +191,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "8",
+          "content": "getRandStrNoNum(8)",
           "type": "Number"
         }
       ]
@@ -231,7 +231,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "8",
+          "content": "getRandStrUpper(8)",
           "type": "Number"
         }
       ]
@@ -271,7 +271,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "'   abc   '",
+          "content": "startsTrim('   abc   ')",
           "type": "String"
         }
       ]
@@ -311,7 +311,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "'   abc   '",
+          "content": "trim('   abc   ')",
           "type": "String"
         }
       ]
@@ -327,6 +327,102 @@ define({ "api": [
     },
     "filename": "lib/string/index.js",
     "groupTitle": "字符串相关"
+  },
+  {
+    "group": "数字相关",
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "lib/number/index.js",
+    "groupTitle": "数字相关",
+    "name": ""
+  },
+  {
+    "type": "Get",
+    "url": "isNumber",
+    "title": "判断是否为数字",
+    "name": "isNumber",
+    "description": "<p>判断是否为数字</p>",
+    "group": "数字相关",
+    "version": "1.1.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "chars",
+            "description": "<p>字符串</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "请求示例",
+          "content": "isNumber(123)",
+          "type": "String"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "返回示例",
+          "content": "true",
+          "type": "boolean"
+        }
+      ]
+    },
+    "filename": "lib/number/index.js",
+    "groupTitle": "数字相关"
+  },
+  {
+    "type": "Get",
+    "url": "isValidDecimal",
+    "title": "判断是否为小数",
+    "name": "isValidDecimal",
+    "description": "<p>判断是否为小数</p>",
+    "group": "数字相关",
+    "version": "1.1.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "chars",
+            "description": "<p>字符串</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "integer",
+            "description": "<p>是否包含整数</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "请求示例",
+          "content": "isValidDecimal(234.112, false)",
+          "type": "String"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "返回示例",
+          "content": "false",
+          "type": "boolean"
+        }
+      ]
+    },
+    "filename": "lib/number/index.js",
+    "groupTitle": "数字相关"
   },
   {
     "group": "时间日期相关",
@@ -517,7 +613,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "AbCdE_9281",
+          "content": "checkStringLevel('AbCdE_9281')",
           "type": "String"
         }
       ]
@@ -557,7 +653,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "405263430@qq.com",
+          "content": "isEmail('405263430@qq.com')",
           "type": "String"
         }
       ]
@@ -567,7 +663,7 @@ define({ "api": [
         {
           "title": "返回示例",
           "content": "true",
-          "type": "boolen"
+          "type": "boolean"
         }
       ]
     },
@@ -597,7 +693,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "43029119700101123X",
+          "content": "isIDNumber('43029119700101123X')",
           "type": "String"
         }
       ]
@@ -607,7 +703,7 @@ define({ "api": [
         {
           "title": "返回示例",
           "content": "true",
-          "type": "boolen"
+          "type": "boolean"
         }
       ]
     },
@@ -637,7 +733,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "<script></script>",
+          "content": "isValidReg('<script></script>')",
           "type": "String"
         }
       ]
@@ -647,7 +743,7 @@ define({ "api": [
         {
           "title": "返回示例",
           "content": "true",
-          "type": "boolen"
+          "type": "boolean"
         }
       ]
     },
@@ -677,7 +773,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "http://baidu.com",
+          "content": "isValidURL('http://www.baidu.com')",
           "type": "String"
         }
       ]
@@ -687,7 +783,7 @@ define({ "api": [
         {
           "title": "返回示例",
           "content": "true",
-          "type": "boolen"
+          "type": "boolean"
         }
       ]
     },
@@ -726,7 +822,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "http://www.baidu.com?id=1&name=张三",
+          "content": "getHostName('http://www.baidu.com?id=1&name=张三')",
           "type": "String"
         }
       ]
@@ -766,7 +862,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "http://www.baidu.com?id=1&name=张三",
+          "content": "getProtocol('http://www.baidu.com?id=1&name=张三')",
           "type": "String"
         }
       ]
@@ -806,7 +902,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "http://www.baidu.com?id=1&name=张三",
+          "content": "getUrlOrigin('http://www.baidu.com?id=1&name=张三')",
           "type": "string"
         }
       ]
@@ -846,7 +942,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "http://www.baidu.com?id=1&name=张三",
+          "content": "getUrlParams('http://www.baidu.com?id=1&name=张三')",
           "type": "String"
         }
       ]
@@ -886,7 +982,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "http://www.baidu.com:3000?id=1&name=张三",
+          "content": "getUrlPort('http://www.baidu.com:3000?id=1&name=张三')",
           "type": "string"
         }
       ]
@@ -926,7 +1022,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "http://www.baidu.com?id=1&name=张三",
+          "content": "getUrlSearch('http://www.baidu.com?id=1&name=张三')",
           "type": "string"
         }
       ]
@@ -966,7 +1062,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "http://www.baidu.com?id=1&name=张三",
+          "content": "isHttpDomain('https://www.baidu.com?id=1&name=张三')",
           "type": "String"
         }
       ]
@@ -1006,7 +1102,7 @@ define({ "api": [
       "examples": [
         {
           "title": "请求示例",
-          "content": "https://www.baidu.com?id=1&name=张三",
+          "content": "isHttpsDomain('https://www.baidu.com?id=1&name=张三')",
           "type": "String"
         }
       ]
@@ -1016,7 +1112,7 @@ define({ "api": [
         {
           "title": "返回示例",
           "content": "true",
-          "type": "boolen"
+          "type": "boolean"
         }
       ]
     },
