@@ -1,8 +1,10 @@
-let stringUtils = require('./lib/string');
-let numberUtils = require('./lib/number');
-let checkUtils = require('./lib/check');
-let dateUtils = require('./lib/date');
-let urlUtils = require('./lib/url');
+const stringUtils = require('./lib/string');
+const numberUtils = require('./lib/number');
+const checkUtils = require('./lib/check');
+const dateUtils = require('./lib/date');
+const urlUtils = require('./lib/url');
+const colorUtils = require('./lib/color');
+
 class JcoUtils {
   constructor () {
     this.String = stringUtils;
@@ -10,6 +12,7 @@ class JcoUtils {
     this.Number = numberUtils;
     this.Date = dateUtils;
     this.Url = urlUtils;
+    this.Color = colorUtils;
   }
 };
 
