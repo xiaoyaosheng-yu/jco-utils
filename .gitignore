@@ -4,8 +4,8 @@
 /apidoc
 /node_modules
 
-# /dist
-# /test
-# .babelrc
-# apidoc.json
-# webpack.config.js
+/dist
+/test
+.babelrc
+apidoc.json
+webpack.config.js

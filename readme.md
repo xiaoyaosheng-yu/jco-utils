@@ -10,9 +10,8 @@ import jcoUtils from 'jco-utils';
 jcoUtils.Check.isEmail('405263430@qq.com');
 ```
 ### CDN
-<!-- 引入组件库 -->
-<script src="./static/jco-utils-1.2.0.min.js"></script>
 ```javascript
+<script src="./static/jco-utils-1.2.0.min.js"></script>
 var jcoUtils = new JcoUtils()
 var isEmail = jcoUtils.Check.isEmail('405263430@qq.com')
 ```
