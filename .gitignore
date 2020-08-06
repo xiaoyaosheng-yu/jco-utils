@@ -2,5 +2,10 @@
 
 /src
 /apidoc
-/test
+/node_modules
 
+# /dist
+# /test
+# .babelrc
+# apidoc.json
+# webpack.config.js
