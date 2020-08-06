@@ -2,9 +2,9 @@
 
 /src
 /apidoc
-/dist
 /node_modules
 
+# /dist
 # /test
 # .babelrc
 # apidoc.json
