@@ -1,19 +1,32 @@
 # JS公共方法库
 
-### 安装
-```npm i jco-utils```
+### Install
+```npm i jco-utils -S```
 
-### 使用
+### Quick Start
 ```javascript
 const jcoUtils = require('jco-utils');
+import jcoUtils from 'jco-utils';
 jcoUtils.Check.isEmail('405263430@qq.com');
 ```
-
-### 分类
+### CDN
+<!-- 引入组件库 -->
+<script src="./static/jco-utils-1.2.0.min.js"></script>
 ```javascript
-字符串相关类：jcoUtils.String
-校验相关类：jcoUtils.Check
-数字相关类：jcoUtils.Number
-日期相关类：jcoUtils.Date
-网址相关类：jcoUtils.Url
+var jcoUtils = new JcoUtils()
+var isEmail = jcoUtils.Check.isEmail('405263430@qq.com')
 ```
+
+### CLASS
+<font color=#0681d0>String</font>: jcoUtils.String
+
+<font color=#0681d0>Check</font>: jcoUtils.Check
+
+<font color=#0681d0>Number</font>: jcoUtils.Number
+
+<font color=#0681d0>Date</font>: jcoUtils.Date
+
+<font color=#0681d0>Url</font>: jcoUtils.Url
+
+<font color=#0681d0>Color</font>: jcoUtils.Color
+
