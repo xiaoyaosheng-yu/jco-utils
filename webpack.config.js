@@ -4,13 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: "./index.js",
   output: {
-    path: path.resolve(__dirname, "dist/static"),
+    path: path.resolve(__dirname, `dist/static/${version}`),
     filename: `${name}-${version}.min.js`,
-    publicPath: './static',
+    publicPath: `./static/${version}`,
   },
   plugins: [
     new HtmlWebpackPlugin({ // 打包输出HTML
-      title: 'Hello World app',
+      title: 'Hello jco-utils',
       minify: { // 压缩HTML文件
         removeComments: true, // 移除HTML中的注释
         collapseWhitespace: true, // 删除空白符与换行符
