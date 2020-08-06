@@ -18,5 +18,5 @@ class JcoUtils {
 
 window.JcoUtils = JcoUtils;
 
-export default new JcoUtils();
+export default JcoUtils;
 
