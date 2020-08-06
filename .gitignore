@@ -2,5 +2,5 @@
 
 /src
 /apidoc
-/test
-
+/dist
+/node_modules
